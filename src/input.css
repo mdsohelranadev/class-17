@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+
+@theme{
+     --spacing-mContainer: 1320px; 
+  --color-midnight: #121063;
+
+}   
