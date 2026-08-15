@@ -252,6 +252,9 @@
   .table {
     display: table;
   }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
+  }
   .w-87 {
     width: calc(var(--spacing) * 87);
   }
@@ -303,8 +306,14 @@
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-\[10px\] {
     border-radius: 10px;
+  }
+  .rounded-tl-\[10px\] {
+    border-top-left-radius: 10px;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -323,11 +332,23 @@
   .bg-\[\#333333\] {
     background-color: #333333;
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-23 {
+    padding-inline: calc(var(--spacing) * 23);
+  }
+  .px-23\.75 {
+    padding-inline: calc(var(--spacing) * 23.75);
   }
   .px-50 {
     padding-inline: calc(var(--spacing) * 50);
@@ -377,6 +398,9 @@
   }
   .text-\[13px\] {
     font-size: 13px;
+  }
+  .text-\[14\.5px\] {
+    font-size: 14.5px;
   }
   .text-\[14px\] {
     font-size: 14px;
