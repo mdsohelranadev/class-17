@@ -8,20 +8,14 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
-    --color-red-700: oklch(50.5% 0.213 27.518);
-    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-green-500: oklch(72.3% 0.219 149.579);
-    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
-    --color-green-900: oklch(39.3% 0.095 152.535);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -202,6 +196,9 @@
   .right-62 {
     right: calc(var(--spacing) * 62);
   }
+  .left-0 {
+    left: 0px;
+  }
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -247,6 +244,12 @@
   .my-15 {
     margin-block: calc(var(--spacing) * 15);
   }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-1\.5 {
+    margin-top: calc(var(--spacing) * 1.5);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -255,6 +258,9 @@
   }
   .mt-3\.75 {
     margin-top: calc(var(--spacing) * 3.75);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
@@ -319,9 +325,6 @@
   .mb-17\.5 {
     margin-bottom: calc(var(--spacing) * 17.5);
   }
-  .mb-20 {
-    margin-bottom: calc(var(--spacing) * 20);
-  }
   .mb-100 {
     margin-bottom: calc(var(--spacing) * 100);
   }
@@ -334,6 +337,9 @@
   .ml-3\.75 {
     margin-left: calc(var(--spacing) * 3.75);
   }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
@@ -345,12 +351,6 @@
   }
   .grid {
     display: grid;
-  }
-  .inline {
-    display: inline;
-  }
-  .inline-block {
-    display: inline-block;
   }
   .table {
     display: table;
@@ -388,14 +388,8 @@
   .w-1\/5 {
     width: calc(1 / 5 * 100%);
   }
-  .w-1\/6 {
-    width: calc(1 / 6 * 100%);
-  }
   .w-25 {
     width: calc(var(--spacing) * 25);
-  }
-  .w-55 {
-    width: calc(var(--spacing) * 55);
   }
   .w-66 {
     width: calc(var(--spacing) * 66);
@@ -442,20 +436,11 @@
   .justify-between {
     justify-content: space-between;
   }
-  .gap-1 {
-    gap: var(--spacing);
-  }
-  .gap-1\.5 {
-    gap: calc(var(--spacing) * 1.5);
-  }
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
   .gap-x-3 {
     column-gap: calc(var(--spacing) * 3);
-  }
-  .gap-x-5 {
-    column-gap: calc(var(--spacing) * 5);
   }
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
@@ -627,10 +612,6 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-9xl {
-    font-size: var(--text-9xl);
-    line-height: var(--tw-leading, var(--text-9xl--line-height));
-  }
   .text-\[8px\] {
     font-size: 8px;
   }
@@ -683,6 +664,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-\[\#1a1a1a\] {
     color: #1a1a1a;
   }
@@ -713,9 +697,6 @@
   .text-grn {
     color: var(--color-grn);
   }
-  .text-red-800 {
-    color: var(--color-red-800);
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -734,41 +715,15 @@
     --tw-duration: 400ms;
     transition-duration: 400ms;
   }
-  .duration-600 {
-    --tw-duration: 600ms;
-    transition-duration: 600ms;
-  }
-  .duration-900 {
-    --tw-duration: 900ms;
-    transition-duration: 900ms;
-  }
   @media (hover: hover) {
-    .hover\:bg-green-500:hover {
-      background-color: var(--color-green-500);
-    }
-    .hover\:bg-green-600:hover {
-      background-color: var(--color-green-600);
-    }
     .hover\:bg-green-700:hover {
       background-color: var(--color-green-700);
-    }
-    .hover\:bg-green-900:hover {
-      background-color: var(--color-green-900);
     }
     .hover\:bg-grn:hover {
       background-color: var(--color-grn);
     }
-    .hover\:text-\[\#333\]:hover {
-      color: #333;
-    }
-    .hover\:text-\[\#808080\]:hover {
-      color: #808080;
-    }
     .hover\:text-amber-50:hover {
       color: var(--color-amber-50);
-    }
-    .hover\:text-green-500:hover {
-      color: var(--color-green-500);
     }
     .hover\:text-white:hover {
       color: var(--color-white);
